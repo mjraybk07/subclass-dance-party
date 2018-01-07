@@ -29,6 +29,9 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
+
+    // push a copy of the dancer object to dancers list for later use
+    window.dancers.push(dancer);
   });
 });
 
