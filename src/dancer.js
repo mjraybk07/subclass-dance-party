@@ -34,6 +34,11 @@ Dancer.prototype.setPosition = function(top, left) {
   //console.log('setPosition.....', top, left);
 };
 
+Dancer.prototype.lineUp = function () {
+  this.$node.css({top: 100, left:100});
+  console.log('lineUp function');
+};
+
 // --- TESTS ---
 // var newDancer = new Dancer(10, 20, 100);
 // console.log(newDancer);
