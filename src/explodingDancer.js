@@ -13,6 +13,7 @@ ExplodingDancer.prototype.constructor = ExplodingDancer;
 ExplodingDancer.prototype.step = function() {
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this, this.timeBetweenSteps);
+
   var context = this;
 
   context.$node.fadeToggle("slow", "linear");
@@ -23,5 +24,5 @@ ExplodingDancer.prototype.step = function() {
 
 // --- TESTS ---
 // var newExplodingDancer = new ExplodingDancer(10, 20, 100);
-// console.log(ExplodingDancer);
+// console.log(newExplodingDancer);
 
