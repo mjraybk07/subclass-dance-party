@@ -54,7 +54,7 @@ Dancer.prototype.step = function () {
   setTimeout(function() {
     context.step();
   }, this.timeBetweenSteps);
-  //console.log(this.timeBetweenSteps);
+
   //console.log('step function...');
 };
 
