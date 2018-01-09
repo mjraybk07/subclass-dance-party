@@ -21,7 +21,6 @@ describe('explodingDancer', function() {
   it('should have a step function that makes its node explode', function() {
     sinon.spy(explodingDancer.$node, 'effect');
     explodingDancer.step();
-    console.log(explodingDancer.$node.effect);
     expect(explodingDancer.$node.effect.called).to.be.true;
     expect(explodingDancer.$node.effect.calledWith('explode')).to.be.true;
   });
@@ -30,7 +29,7 @@ describe('explodingDancer', function() {
     it('should call step at least once per second', function() {
       sinon.spy(explodingDancer, 'step');
       expect(explodingDancer.step.callCount).to.be.equal(0);
-      // clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
+      clock.tick(timeBetweenSteps); // ? it seems an extra tick is necessary...
       clock.tick(timeBetweenSteps);
 
       expect(explodingDancer.step.callCount).to.be.equal(1);

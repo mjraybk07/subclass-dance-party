@@ -38,17 +38,11 @@ $(document).ready(function() {
     console.log('line up dancers click');
     console.log(window.dancers.length);
 
-
     for (var i = 0; i < window.dancers.length; i++) {
       var dancer = window.dancers[i];
       console.log(dancer);
       dancer.lineUp();
     }
-
-
   });
-
-
-
 });
 
