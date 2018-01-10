@@ -35,9 +35,9 @@ Dancer.prototype.setPosition = function(top, left) {
 };
 
 Dancer.prototype.lineUp = function (x, y) {
-  this.$node.css({top: 100, left:100});
+  //this.$node.css({top: 100, left:100});
   console.log('lineUp function');
-  //this.setPosition(300, this.top);
+  this.setPosition(300, this.top);
 
 };
 
