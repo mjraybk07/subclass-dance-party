@@ -24,14 +24,20 @@ $(document).ready(function() {
 
     // make a dancer with a random position
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $('body').height() * Math.random(),
+      $('body').width() * Math.random(),
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
 
     // push a copy of the dancer object to dancers list for later use
     window.dancers.push(dancer);
+  });
+
+  $('.dancer').on('click', function() {
+    console.log('mouseover.....');
+    // this.$node.hide();
+    $('.dancer').css('color', 'yellow');
   });
 
   $('.lineUpDancers').on('click', function (event) {
@@ -42,8 +48,12 @@ $(document).ready(function() {
     for (var i = 0; i < window.dancers.length; i++) {
       var dancer = window.dancers[i];
       console.log(dancer);
-      dancer.lineUp(10, 10);
+      dancer.lineUp();
     }
   });
+
+
+
+
 });
 
